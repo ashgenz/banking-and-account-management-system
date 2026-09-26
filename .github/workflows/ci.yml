@@ -23,7 +23,7 @@ jobs:
     - name: Compile Java Files
       run: |
         cd src
-        javac exceptions/*.java models/*.java service/*.java main/Main.java
+        javac exceptions/*.java models/*.java service/*.java main/Main.java interfaces/BankOperations.java
 
     - name: Run Automated Test Script (Optional)
       run: |
