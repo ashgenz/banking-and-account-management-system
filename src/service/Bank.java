@@ -3,9 +3,10 @@ package service;
 import java.util.HashMap;
 
 
-import exception.*;
+// import exception.*;
+import exceptions.*;
 import models.Account;
-import models.SavingAccount;
+import models.SavingsAccount;
 import models.CurrentAccount;
 
 
@@ -21,7 +22,7 @@ public class Bank {
     private HashMap<String,Account> accounts;
     public Bank(){
         //initialized hashmap
-        this.accounts =new HashMap();
+        this.accounts = new HashMap<>();
 
     }
     public void createAccount(String type, String accNum, String name, double initialDeposit) throws InvalidAmountException {
@@ -38,9 +39,9 @@ public class Bank {
         }
 
         //make account block
-        Account newAcc;
+        Account newAcc=null;
         if(type.equalsIgnoreCase("savings")){
-            newAcc= new SavingAccount(accNum,name,initialDeposit);
+            newAcc= new SavingsAccount(accNum,name,initialDeposit);
         }
         else if(type.equalsIgnoreCase("current")) {
             newAcc= new CurrentAccount(accNum,name,initialDeposit);
