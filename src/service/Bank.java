@@ -64,7 +64,7 @@ public class Bank {
             if(Acc==null){
                 throw new InvalidAccountOperationException("Error: Account not Found!");
             }
-            System.out.println(accountNumber+" Account found!");
+            System.out.println("Account with a/c no." + accountNumber+" found!");
         
         return Acc;
     }
@@ -82,7 +82,7 @@ public class Bank {
         // }
         //if return nothing throw 
         Acc.deposit(amount);
-        System.out.println("rupees"+amount+"credited to"+accNum+".");
+        System.out.println("rupees "+amount+" credited to "+accNum+".");
         //if invlaid amount throw
         }
         catch(InvalidAccountOperationException e){
@@ -110,7 +110,7 @@ public class Bank {
             throw new InsufficientBalanceException("Insufficient Balance!");
         }
         Acc.withdraw(amount);
-        System.out.println("rupees"+amount+"debited from"+accNum+".");
+        System.out.println("rupees "+amount+" debited from "+accNum+".");
         //if invlaid amount throw
         }
         catch(InvalidAccountOperationException e){
@@ -148,7 +148,7 @@ public class Bank {
         }
         sourceAcc.withdraw(amount);
         targetAcc.deposit(amount);
-        System.out.println("rupees"+amount+"debited from"+sourceAcc+"and credited to " + targetAcc+".");
+        System.out.println("rupees "+amount+" debited from "+sourceAcc+" and credited to " + targetAcc+".");
         //if invlaid amount throw
         }
         catch(InvalidAccountOperationException e){
